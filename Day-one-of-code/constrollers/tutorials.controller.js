@@ -22,7 +22,15 @@ exports.create = (req, res) => {
 };
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
-
+    const title = req.title;
+    var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+    const tutorials = Tutorial.find(condition)
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({ message: "Some error occured while retrieving the tutorials" });
+        })
 };
 // Find a single Tutorial with an id
 exports.findOne = (req, res) => {

@@ -1,13 +1,13 @@
-const { where } = require("sequelize/types");
+//const { where } = require("sequelize/types");
 const db = require("../models");
 const Tutorial = db.tutorials;
 const Op = db.Sequelize.Op;
 // Create and Save a new Tutorial
-exports.create = (req, res) => {
+/* exports.create = (req, res) => {
     if (!req.body.title)
         return res.status(400).send({ message: "Cannot be empty" });
 
-    const tutorials = { title: req.title, description: req.description, published: req.published };
+    const tutorials = { title: req.body.title, description: req.body.description, published: req.body.published ? req.body.published : false };
     Tutorial.create(tutorials)
         .then(data => {
             res.status(200).send({ message: "successfully created tutorials" });
@@ -16,6 +16,33 @@ exports.create = (req, res) => {
             res.status(500).send({ message: err || "server error" });
         })
 
+}; */
+exports.create = (req, res) => {
+    // Validate request
+
+    console.log(req.body)
+    if (!req.body.title) {
+        res.status(400).send({
+            message: "Content can not be empty!"
+        });
+        return;
+    }
+    // Create a Tutorial
+    const tutorial = {
+        title: req.body.title,
+        description: req.body.description,
+        published: req.body.published ? req.body.published : false
+    };
+    // Save Tutorial in the database
+    Tutorial.create(tutorial)
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message: err.message || "Some error occurred while creating the Tutorial."
+            });
+        });
 };
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {

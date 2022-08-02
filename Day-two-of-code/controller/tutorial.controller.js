@@ -58,6 +58,16 @@ exports.findOne = (req, res) => {
 // Update a Tutorial by the id in the request
 exports.update = (req, res) => {
 
+    const id = req.params.id;
+    Tutorial.update(req.body, { where: { id: id } })
+        .then(num => {
+            if (num == 1)
+                return res.send({ message: "Updated successfully" })
+            res.status(404).send({ message: "Cannot update may be not found" });
+        })
+        .catch(err => {
+            res.status(500).send({ message: err || "server error" })
+        })
 };
 // Delete a Tutorial with the specified id in the request
 exports.delete = (req, res) => {

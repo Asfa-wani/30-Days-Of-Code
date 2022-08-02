@@ -71,7 +71,16 @@ exports.update = (req, res) => {
 };
 // Delete a Tutorial with the specified id in the request
 exports.delete = (req, res) => {
-
+    const id = req.params.id;
+    Tutorial.destroy({ where: { id: id } })
+        .then(num => {
+            if (num == 1)
+                return res.send({ message: "deleted successfully" })
+            res.status(404).send({ message: "Cannot delete may be not found" });
+        })
+        .catch(err => {
+            res.status(500).send({ message: err || "server error" })
+        })
 };
 // Delete all Tutorials from the database.
 exports.deleteAll = (req, res) => {

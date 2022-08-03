@@ -11,4 +11,5 @@ const User = mongoose.model(
         }]
     })
 );
-module.exports = Role;
+
+module.exports = User;

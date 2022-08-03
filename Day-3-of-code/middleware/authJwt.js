@@ -73,4 +73,4 @@ const authJwt = {
     isAdmin,
     isModerator
 };
-module.exports = authJwt;
+module.exports = { authJwt };

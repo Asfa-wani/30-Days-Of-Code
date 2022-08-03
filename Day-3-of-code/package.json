@@ -1,0 +1,17 @@
+{
+  "name": "day-3-of-code",
+  "version": "1.0.0",
+  "description": "User authentication and authorizantion with jwt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node-js",
+    "jsonwebtoken",
+    "express",
+    "mongodb"
+  ],
+  "author": "Asfa wani",
+  "license": "ISC"
+}

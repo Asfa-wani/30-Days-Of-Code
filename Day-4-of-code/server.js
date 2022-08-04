@@ -5,6 +5,27 @@ const corsOptions = {
 };
 const app = express();
 const bodyParser = require("body-parser");
+const db = require("./models");
+db.Roles = db.roles;
+db.sequelize.sync({ force: true }).then(() => {
+    console.log("Db resync"),
+        initialize();
+})
+
+function initialize() {
+    Role.create({
+        id: 1,
+        name: "admin"
+    });
+    Role.create({
+        id: 2,
+        name: "mod"
+    });
+    Role.create({
+        id: 3,
+        name: "user"
+    })
+}
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());

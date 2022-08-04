@@ -6,7 +6,7 @@ const corsOptions = {
 const app = express();
 const bodyParser = require("body-parser");
 const db = require("./models");
-db.Roles = db.roles;
+const Role = db.role;
 db.sequelize.sync({ force: true }).then(() => {
     console.log("Db resync"),
         initialize();

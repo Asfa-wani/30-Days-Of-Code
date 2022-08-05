@@ -8,4 +8,7 @@
 - Node.js postgres Rest CRUD API overview.
 
 # Day-Three
-- Node.js + MongoDB: User Authentication & Authorization with JWT
+- Node.js + MongoDB: User Authentication & Authorization with JWT.
+
+# Day-Four
+- Node.js JWT Authentication with PostgreSQL

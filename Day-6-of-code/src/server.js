@@ -1,3 +1,4 @@
+//IMPLEMENTING ONE TO ONE RELATIONSHIP USING EMBEDDING/DENORMALIZATION
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/day5_db", {
         useNewUrlParser: true,

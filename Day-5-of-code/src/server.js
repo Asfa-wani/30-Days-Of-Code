@@ -1,3 +1,6 @@
+//IMPLEMENTING ONE TO ONE RELATIONSHIP USING REFERENCING/NORMALIZATION
+
+
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/day5_db", {
         useNewUrlParser: true,

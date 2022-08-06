@@ -15,3 +15,6 @@
 
 # Day-Five
 - Mongoose One-to-One relationship: Referencing.
+
+# Day-Six
+- Mongoose One-to-One relationship: Embedding.

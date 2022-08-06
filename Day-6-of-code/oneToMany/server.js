@@ -8,22 +8,25 @@ const createTutorial = function(tutorial) {
     });
 };
 const createImage = function(tutorialId, image) {
-    console.log("\n>> Add Image:\n", image);
-    return db.Tutorial.findByIdAndUpdate(
-        tutorialId, {
-            $push: {
-                images: {
-                    url: image.url,
-                    caption: image.caption
+    return db.Image.create(image).then(docImage => {
+        console.log("\n>> Created Image:\n", docImage);
+        return db.Tutorial.findByIdAndUpdate(
+            tutorialId, {
+                $push: {
+                    images: {
+                        _id: docImage._id,
+                        url: docImage.url,
+                        caption: docImage.caption
+                    }
                 }
-            }
-        }, { new: true, useFindAndModify: false }
-    );
+            }, { new: true, useFindAndModify: false }
+        );
+    });
 };
 const run = async function() {
     var tutorial = await createTutorial({
-        title: "Tutorial #1",
-        author: "bezkoder"
+        title: "one to many relationship",
+        author: "asfa"
     });
     tutorial = await createImage(tutorial._id, {
         path: "sites/uploads/images/mongodb.png",
@@ -40,6 +43,7 @@ const run = async function() {
     });
     console.log("\n>> Tutorial:\n", tutorial);
 };
+
 
 mongoose.connect("mongodb://localhost:27017/day6_db", {
         useNewUrlParser: true

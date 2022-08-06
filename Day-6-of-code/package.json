@@ -1,19 +1,19 @@
 {
-  "name": "day-5-of-code",
-  "version": "1.0.0",
-  "description": "Mongoose one-to-one relation ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "mongoose",
-    "one-to-one",
-    "relationship"
-  ],
-  "author": "Asfa Wani",
-  "license": "ISC",
-  "dependencies": {
-    "mongoose": "^6.5.1"
-  }
+    "name": "day-6-of-code",
+    "version": "1.0.0",
+    "description": "Mongoose one-to-one relation ",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mongoose",
+        "one-to-one",
+        "relationship"
+    ],
+    "author": "Asfa Wani",
+    "license": "ISC",
+    "dependencies": {
+        "mongoose": "^6.5.1"
+    }
 }

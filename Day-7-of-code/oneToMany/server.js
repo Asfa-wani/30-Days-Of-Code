@@ -61,7 +61,8 @@ const run = async function() {
         description: "Node.js tutorial"
     });
     tutorial = await addTutorialToCategory(tutorial._id, category._id);
-    console.log("\n>> Tutorial:\n", tutorial);
+    var tutorials = await getTutorialsInCategory(category._id);
+    console.log("\n>> all Tutorials in Cagetory:\n", tutorials);
 };
 
 

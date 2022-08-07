@@ -4,4 +4,5 @@ const Comment = mongoose.model("Comment", new mongoose.Schema({
     text: String,
     createdAt: Date
 }));
+
 module.exports = Comment;

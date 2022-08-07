@@ -50,6 +50,12 @@ const run = async function() {
     console.log("\n>> Tutorial:\n", tutorial);
     tutorial = await getTutorialWithPopulate(tutorial._id);
     console.log("\n>> populated Tutorial:\n", tutorial);
+    var category = await createCategory({
+        name: "Node.js",
+        description: "Node.js tutorial"
+    });
+    tutorial = await addTutorialToCategory(tutorial._id, category._id);
+    console.log("\n>> Tutorial:\n", tutorial);
 };
 
 

@@ -36,6 +36,8 @@ const run = async function() {
         createdAt: Date.now()
     });
     console.log("\n>> Tutorial:\n", tutorial);
+    tutorial = await getTutorialWithPopulate(tutorial._id);
+    console.log("\n>> populated Tutorial:\n", tutorial);
 };
 
 

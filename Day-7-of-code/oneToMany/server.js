@@ -44,7 +44,14 @@ const run = async function() {
     console.log("\n>> Tutorial:\n", tutorial);
 };
 
-
+const createComment = function(tutorialId, comment) {
+    return db.Comment.create(comment).then(docComment => {
+        console.log("\n>> Created Comment:\n", docComment);
+        return db.Tutorial.findByIdAndUpdate(
+            tutorialId, { $push: { comments: docComment._id } }, { new: true, useFindAndModify: false }
+        );
+    });
+};
 mongoose.connect("mongodb://localhost:27017/day6_db", {
         useNewUrlParser: true
     })

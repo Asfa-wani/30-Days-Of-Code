@@ -18,3 +18,6 @@
 
 # Day-Six
 - Mongoose One-to-One relationship: Embedding.
+
+# Day-Seven
+- Mongoose One-to-Many relationship: Referencing.

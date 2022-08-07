@@ -7,26 +7,22 @@ const createTutorial = function(tutorial) {
         return docTutorial;
     });
 };
-const createImage = function(tutorialId, image) {
-    return db.Image.create(image).then(docImage => {
-        console.log("\n>> Created Image:\n", docImage);
+
+const createComment = function(tutorialId, comment) {
+    return db.Comment.create(comment).then(docComment => {
+        console.log("\n>> Created Comment:\n", docComment);
         return db.Tutorial.findByIdAndUpdate(
-            tutorialId, {
-                $push: {
-                    images: {
-                        _id: docImage._id,
-                        url: docImage.url,
-                        caption: docImage.caption
-                    }
-                }
-            }, { new: true, useFindAndModify: false }
+            tutorialId, { $push: { comments: docComment._id } }, { new: true, useFindAndModify: false }
         );
     });
+};
+const getTutorialWithPopulate = function(id) {
+    return db.Tutorial.findById(id).populate("comments");
 };
 const run = async function() {
     var tutorial = await createTutorial({
         title: "Tutorial #1",
-        author: "bezkoder"
+        author: "Asfa"
     });
     tutorial = await createComment(tutorial._id, {
         username: "jack",
@@ -42,14 +38,7 @@ const run = async function() {
     console.log("\n>> Tutorial:\n", tutorial);
 };
 
-const createComment = function(tutorialId, comment) {
-    return db.Comment.create(comment).then(docComment => {
-        console.log("\n>> Created Comment:\n", docComment);
-        return db.Tutorial.findByIdAndUpdate(
-            tutorialId, { $push: { comments: docComment._id } }, { new: true, useFindAndModify: false }
-        );
-    });
-};
+
 mongoose.connect("mongodb://localhost:27017/day6_db", {
         useNewUrlParser: true
     })

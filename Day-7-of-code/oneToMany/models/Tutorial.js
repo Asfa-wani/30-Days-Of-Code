@@ -7,7 +7,7 @@ const Tutorial = mongoose.model(
         images: [],
         comments: [{
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Comments"
+            ref: "Comment"
         }]
     })
 );

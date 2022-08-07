@@ -17,7 +17,7 @@ const createComment = function(tutorialId, comment) {
     });
 };
 const getTutorialWithPopulate = function(id) {
-    return db.Tutorial.findById(id).populate("comments");
+    return db.Tutorial.findById(id).populate("comments", "-_id -__v");
 };
 const run = async function() {
     var tutorial = await createTutorial({

@@ -31,6 +31,12 @@ const addTutorialToCategory = function(tutorialId, categoryId) {
         tutorialId, { category: categoryId }, { new: true, useFindAndModify: false }
     );
 };
+
+const getTutorialsInCategory = function(categoryId) {
+    return db.Tutorial.find({ category: categoryId })
+        .populate("category", "name -_id")
+        .select("-comments -images -__v");
+};
 const run = async function() {
     var tutorial = await createTutorial({
         title: "Tutorial #1",

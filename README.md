@@ -23,4 +23,4 @@
 - Mongoose One-to-Many relationship: Referencing.
 
 # Day-Eight
-- Mongoose Many-to-Many relationship.
+- Mongoose Many-to-Many relationship: Embedding.

@@ -22,6 +22,14 @@ const addTutorialToTag = function(tagId, tutorial) {
         tagId, { $push: { tutorials: tutorial._id } }, { new: true, useFindAndModify: false }
     );
 };
+
+const getTutorialWithPopulate = function(id) {
+    return db.Tutorial.findById(id).populate("tags");
+};
+const getTagWithPopulate = function(id) {
+    return db.Tag.findById(id).populate("tutorials");
+};
+
 const run = async function() {
     var tut1 = await createTutorial({
         title: "Tut #1",
@@ -47,10 +55,15 @@ const run = async function() {
         title: "Tut #2",
         author: "zkoder"
     });
+
     tutorial = await addTagToTutorial(tut2._id, tagB);
     console.log("\n>> tut2:\n", tutorial);
     tag = await addTutorialToTag(tagB._id, tut2);
     console.log("\n>> tagB:\n", tag);
+    tutorial = await getTutorialWithPopulate(tut1._id);
+    console.log("\n>> populated tut1:\n", tutorial);
+    tag = await getTagWithPopulate(tag._id);
+    console.log("\n>> populated tagB:\n", tag);
 };
 mongoose
     .connect("mongodb://localhost/day8_db", {

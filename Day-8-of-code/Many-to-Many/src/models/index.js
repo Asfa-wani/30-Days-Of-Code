@@ -1,4 +1,4 @@
 module.exports = {
-    Tag: require("./Image"),
+    Tag: require("./Tag"),
     Tutorial: require("./Tutorial")
 };

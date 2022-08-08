@@ -53,7 +53,7 @@ const run = async function() {
     console.log("\n>> tagB:\n", tag);
 };
 mongoose
-    .connect("mongodb://localhost/bezkoder_db", {
+    .connect("mongodb://localhost/day8_db", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })

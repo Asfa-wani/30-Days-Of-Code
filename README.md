@@ -21,3 +21,6 @@
 
 # Day-Seven
 - Mongoose One-to-Many relationship: Referencing.
+
+# Day-Eight
+- Mongoose Many-to-Many relationship.

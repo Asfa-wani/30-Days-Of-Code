@@ -11,5 +11,8 @@
     "mongoose"
   ],
   "author": "Asfa Wani",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.5.1"
+  }
 }

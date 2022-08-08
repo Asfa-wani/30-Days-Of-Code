@@ -1,0 +1,15 @@
+{
+  "name": "many-to-many",
+  "version": "1.0.0",
+  "description": "Mongoose Many to many relationship",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "many-to-many",
+    "mongoose"
+  ],
+  "author": "Asfa Wani",
+  "license": "ISC"
+}

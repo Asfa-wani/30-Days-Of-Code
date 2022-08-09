@@ -13,5 +13,10 @@
     "one-to-may"
   ],
   "author": "Asfa wani",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3"
+  }
 }

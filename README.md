@@ -25,3 +25,5 @@
 # Day-Eight
 - Mongoose Many-to-Many relationship: Embedding.
 
+# Day-Nine
+- Sequelize One-to-Many Association example with Node.js & MySQL

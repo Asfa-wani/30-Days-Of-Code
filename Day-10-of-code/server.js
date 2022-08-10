@@ -42,6 +42,21 @@ const run = async() => {
         ">> Tutorial id=" + tut2Data.id,
         JSON.stringify(tut2Data, null, 2)
     );
+
+    const comment1Data = await controller.findCommentById(comment1.id);
+    console.log(
+        ">> Comment id=" + comment1.id,
+        JSON.stringify(comment1Data, null, 2)
+    );
+
+    const comment2Data = await controller.findCommentById(comment2.id);
+    console.log(
+        ">> Comment id=" + comment2.id,
+        JSON.stringify(comment2Data, null, 2)
+    );
+
+    const tutorials = await controller.findAll();
+    console.log(">> All tutorials", JSON.stringify(tutorials, null, 2));
 };
 // db.sequelize.sync();
 db.sequelize.sync({ force: true }).then(() => {

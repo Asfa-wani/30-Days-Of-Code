@@ -1,0 +1,22 @@
+{
+  "name": "day-9-of-code",
+  "version": "1.0.0",
+  "description": "node sequelize one-to-many relationship",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "sequelize",
+    "pg",
+    "one-to-may"
+  ],
+  "author": "Asfa wani",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3"
+  }
+}

@@ -20,6 +20,28 @@ const run = async() => {
         name: "zkoder",
         text: "One of the best tuts!",
     });
+
+    const comment2 = await controller.createComment(tut2.id, {
+        name: "aKoder",
+        text: "Hi, thank you!",
+    });
+
+    await controller.createComment(tut2.id, {
+        name: "anotherKoder",
+        text: "Awesome tut!",
+    });
+
+    const tut1Data = await controller.findTutorialById(tut1.id);
+    console.log(
+        ">> Tutorial id=" + tut1Data.id,
+        JSON.stringify(tut1Data, null, 2)
+    );
+
+    const tut2Data = await controller.findTutorialById(tut2.id);
+    console.log(
+        ">> Tutorial id=" + tut2Data.id,
+        JSON.stringify(tut2Data, null, 2)
+    );
 };
 // db.sequelize.sync();
 db.sequelize.sync({ force: true }).then(() => {

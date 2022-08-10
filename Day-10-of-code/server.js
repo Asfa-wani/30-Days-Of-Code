@@ -15,6 +15,11 @@ const run = async() => {
         name: "bezkoder",
         text: "Good job!",
     });
+
+    await controller.createComment(tut1.id, {
+        name: "zkoder",
+        text: "One of the best tuts!",
+    });
 };
 // db.sequelize.sync();
 db.sequelize.sync({ force: true }).then(() => {

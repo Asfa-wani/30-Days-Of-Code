@@ -29,4 +29,7 @@
 - Sequelize One-to-Many Association example with Node.js & MySQL.
 
 # Day-Ten
-- Sequelize One-to-Many Association example with Node.js & MySQL
+- Sequelize One-to-Many Association example with Node.js & MySQL.
+
+# Day-Eleven
+- Sequelize Many-to-Many Implementation in Node.js.

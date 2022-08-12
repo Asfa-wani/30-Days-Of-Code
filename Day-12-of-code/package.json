@@ -1,0 +1,16 @@
+{
+  "name": "day-12-of-code",
+  "version": "1.0.0",
+  "description": "file upload in node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "file-uploads",
+    "multer",
+    "express"
+  ],
+  "author": "Asfa wani",
+  "license": "ISC"
+}

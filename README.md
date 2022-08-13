@@ -33,3 +33,6 @@
 
 # Day-Eleven
 - Sequelize Many-to-Many Implementation in Node.js.
+
+# Day-Twelve
+- How to upload multiple files in Node.js

@@ -1,0 +1,21 @@
+{
+    "name": "day-14-of-code",
+    "version": "1.0.0",
+    "description": "file upload in node js",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "image-uploads",
+        "image-resize",
+        "multer",
+        "express",
+        "mongodb"
+    ],
+    "author": "Asfa wani",
+    "license": "ISC",
+    "dependencies": {
+
+    }
+}

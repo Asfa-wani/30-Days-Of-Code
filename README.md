@@ -35,4 +35,7 @@
 - Sequelize Many-to-Many Implementation in Node.js.
 
 # Day-Twelve
-- How to upload multiple files in Node.js
+- How to upload multiple files in Node.js.
+
+# Day-Thirteen
+- Upload & resize multiple images in Node.js using Express, Multer, Sharp.

@@ -1,7 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const app = express();
-const initRoutes = require("./routes");
+const initRoutes = require("./routes/web");
 var corsOptions = {
     origin: "http://localhost:8081"
 };

@@ -39,3 +39,6 @@
 
 # Day-Thirteen
 - Upload & resize multiple images in Node.js using Express, Multer, Sharp.
+
+# Day-Fourteen
+- How to upload/store images in MongoDB using Node.js, Express & Multer

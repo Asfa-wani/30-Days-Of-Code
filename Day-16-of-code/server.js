@@ -7,7 +7,11 @@ const app = express();
 
 
 app.use(cors(corsOptions));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+    res.send({ messaage: "Hello world! by AsfaS" })
+})
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

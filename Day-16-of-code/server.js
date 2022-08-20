@@ -10,7 +10,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
-    res.send({ messaage: "Hello world! by AsfaS" })
+    res.send({ messaage: "Hello world! by Asfa" })
 })
 
 const PORT = process.env.PORT || 8080;

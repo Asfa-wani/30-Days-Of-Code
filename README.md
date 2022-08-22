@@ -57,3 +57,11 @@
 # Day-Eighteen
 - Learn how to setup ExpressJS application. Write `Hello World` program multiple times with different project structures. 
   Setup package.json properly, setup the tests and automate the running and restarting of the application.
+
+# Day-Nineteen
+- Create a user registration for with the following elements.
+  - Name
+  - Username
+  - Email
+  - Gender
+  - Date of Birth

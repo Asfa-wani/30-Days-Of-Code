@@ -1,0 +1,17 @@
+{
+  "name": "day-19-of-code",
+  "version": "1.0.0",
+  "description": "user registration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "mongoose",
+    "jwt"
+  ],
+  "author": "Asfa Wani",
+  "license": "ISC"
+}

@@ -13,5 +13,10 @@
     "jwt"
   ],
   "author": "Asfa Wani",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2"
+  }
 }

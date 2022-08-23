@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const connection = require("../../../MileStones/Capstone/Capstone/Server/db/connection");
+
 const corsOptions = {
     origin: "http://localhost:8081"
 };
+const connection = require("./server/config/db.config");
 const app = express();
 connection();
 

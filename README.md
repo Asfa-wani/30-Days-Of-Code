@@ -65,3 +65,11 @@
   - Email
   - Gender
   - Date of Birth
+
+# Day-Twenty
+- Create a user registration for with the following elements.
+  - Name
+  - Username
+  - Email
+  - Gender
+  - Date of Birth

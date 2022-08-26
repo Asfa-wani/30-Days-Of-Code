@@ -7,7 +7,7 @@ const corsOptions = {
 };
 const connection = require("./server/config/db.config");
 const app = express();
-const static_path = path.join(__dirname, "./server/view");
+const static_path = path.join(__dirname, "./public");
 //console.log(path.join(__dirname, "./server/view"))
 connection();
 app.use(express.static(static_path));

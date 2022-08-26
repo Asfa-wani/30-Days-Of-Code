@@ -82,7 +82,16 @@
   - Gender
   - Date of Birth
 
-# Day-Twenty-Twenty
+# Day-Twenty-Two
+- Create a user registration for with the following elements.
+  - Name
+  - Username
+  - Email
+  - Gender
+  - Date of Birth
+
+
+# Day-Twenty-Three
 - Create a user registration for with the following elements.
   - Name
   - Username

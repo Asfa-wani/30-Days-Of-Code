@@ -11,6 +11,7 @@ const static_path = path.join(__dirname, "./public");
 //console.log(path.join(__dirname, "./server/view"))
 connection();
 app.use(express.static(static_path));
+app.set("view engine", "hbs")
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -15,7 +15,9 @@ app.set("view engine", "hbs")
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.get("/", (Req, res) => {
+    res.render("index")
+})
 app.use("/api/user", userRoute);
 
 
